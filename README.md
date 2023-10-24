@@ -22,6 +22,7 @@ II. Cahier des charges
   ◦ de faire jouer ou rejouer l’ensemble des personnages 10 fois.
   ◦ d’afficher le classement final des personnages (Nom : score), par ordre de score décroissant.
   ◦ d’afficher la moyenne de l’ensemble scores en fin de classement.
+
 III. Bonus optionnels
   En fonction de votre motivation, de vos compétences et du temps que vous souhaitez y consacrer, voici
   quelques pistes optionnelles :
