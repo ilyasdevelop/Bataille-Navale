@@ -22,8 +22,6 @@ II. Cahier des charges
   ◦ de faire jouer ou rejouer l’ensemble des personnages 10 fois.
   ◦ d’afficher le classement final des personnages (Nom : score), par ordre de score décroissant.
   ◦ d’afficher la moyenne de l’ensemble scores en fin de classement.
-  5. Préparer un diaporama permettant de présenter votre projet à la classe en 5 - 10 minutes.
-  ◦ Ce diaporama doit inclure un algorithme en pseudo-code, d’une petite partie de votre projet.
 III. Bonus optionnels
   En fonction de votre motivation, de vos compétences et du temps que vous souhaitez y consacrer, voici
   quelques pistes optionnelles :
