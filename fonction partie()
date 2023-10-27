@@ -31,7 +31,7 @@ def partie():
             i = 0
             while i < len(bateaux) and not en_vue:
                 j = 0
-                while  j< 2 and not en_vue:
+                while  j < 2 and not en_vue:
                     if coup[0] == bateaux[i][j] or coup[1] == bateaux[i][j]:
                         en_vue = True
                     j += 1
