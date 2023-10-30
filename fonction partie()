@@ -24,7 +24,7 @@ def partie():
             coup = (randint(1, 5), randint(1, 5))
         coups_deja_joues.append(coup)
         if coup in bateaux:
-            points += 5
+            points += 10
             bateaux.remove(coup)
         else:
             en_vue = False
