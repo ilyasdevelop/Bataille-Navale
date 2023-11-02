@@ -53,11 +53,164 @@ with open("Characters.csv", mode='r', encoding='utf-8') as f:
 print(tableau_eleves)
 
 '''
-Ce programme permet de faire jouer tout les personnage une foix et de stocker leur résultat
+Ce programme permet de faire jouer tout les personnage 10 fois et de stocker leur résultat
+'''
+scores = []
+for _ in range(10):
+    score_partie = []  # Liste pour stocker les scores de cette partie
+    for eleves in tableau_eleves:
+        score_partie.append(partie())  # Ajout du score à la liste de la partie en cours
+    scores.append(score_partie)  # Ajout de la liste des scores de cette partie à la liste principale
+'''
+# Calcul de la moyenne pour chaque personnage
+for score_list in scores:
+    moyenne = sum(score_list) / len(score_list)
+    moyenne.append(moyenne)
+print(score_list)
+'''
+#calcul moyenne 
+for i in scores:
+    moyenne = sum(i) / len(scores)
+print(type(moyenne))
+fusion_scores_tab = dict(zip(tableau_eleves, moyenne))
+print(fusion_scores_tab)
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+tiens abde regarde
+# Liste des personnages
+tableau_eleves = ['Harry', 'Ron', 'Hermione', 'Dumbledore', 'Hagrid', 'Malfoy']
+
+# Initialisation de la liste pour stocker les scores
+scores = []
+
+# Simulation de 10 parties
+for _ in range(10):
+    scores_partie = {}  # Dictionnaire pour stocker les scores de cette partie
+    for eleve in tableau_eleves:
+        scores_partie[eleve] = partie()  # Ajout du score au dictionnaire de la partie en cours
+    scores.append(scores_partie)  # Ajout du dictionnaire des scores de cette partie à la liste principale
+
+# Calcul du score total pour chaque personnage
+total_scores = {eleve: sum(scores[partie][eleve] for partie in range(10)) for eleve in tableau_eleves}
+
+# Classement des personnages par score décroissant
+classement_final = sorted(total_scores.items(), key=lambda item: item[1], reverse=True)
+
+# Affichage du classement final
+for i, (personnage, score) in enumerate(classement_final, 1):
+    print(f"{i}. {personnage} : {score}")
+
+
+
+
+
 '''
 
-score = []
-for _ in tableau_eleves:
-    
-    score.append(partie())
-print(score)
+
+
+
+
+
+
+
+
+'''
+Ce programme va faire 
+'''
+
+
+dictionnaire_fusion = dict(zip(tableau_eleves, scores))
+print(dictionnaire_fusion)
+
+
+# Dictionnaire pour stocker les scores de chaque personnage
+scores_personnages = {personnage: [] for personnage in tableau_eleves}
+print(scores_personnages)
+
+
+'''
+# Ajouter les scores de chaque personnage dans le dictionnaire
+for j in range(len(score)):
+    for i in range(len(tableau_eleves)):
+        scores_personnages[tableau_eleves[i]].append(score[j][i])
+'''
+
+
+
+
+'''
+# Calcul de la moyenne pour chaque personnage
+moyennes = {personnage: sum(score) / len(score) for personnage, score in scores_personnages.items()}
+
+# Affichage des moyennes
+for personnage, moyenne in moyennes.items():
+    print(f"Moyenne de {personnage} : {moyenne}")
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+# Liste de scores pour chaque personnage
+scores = [
+    [5, 8, 9, 3, 6, 2, 8, 7, 4, 6],  # Scores du personnage 1
+    [6, 7, 9, 2, 5, 3, 7, 6, 3, 4],  # Scores du personnage 2
+    [8, 9, 9, 4, 7, 5, 9, 8, 
+
+# Liste pour stocker les moyennes
+moyennes = []
+
+# Calcul de la moyenne pour chaque personnage
+for score_list in scores:
+    moyenne = sum(score_list) / len(score_list)
+    moyennes.append(moyenne)
+
+# Affichage des moyennes
+for i, moyenne in enumerate(moyennes):
+    print(f"Moyenne du personnage {i+1} : {moyenne}")
+'''
+
+
+
+
+
+
+
+
+
+
