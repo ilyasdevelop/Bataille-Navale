@@ -1,12 +1,14 @@
 # coding: utf-8
-'''
-Voici la fonction qui va exécuter une partie de bataille navale et
-retourner le nombre de points obtenus. Le nom de cette fonction est
-partie()
-'''
+
 from random import randint
 
 def partie():
+    '''
+    Voici la fonction qui va exécuter une partie de bataille navale et
+    retourner le nombre de points obtenus. Le nom de cette fonction est
+    partie()
+    Sortie : (INT) points 
+    '''
     bateaux = []
     nb_bateaux = 2
     for _ in range(nb_bateaux):
@@ -42,7 +44,7 @@ def partie():
 
 
 '''
-Ce programme sert à importer les personnages du fichier Charactere.csv
+Les lignes de codes suivantes permettent à importer les personnages du fichier Charactere.csv
 '''
 
 with open("Characters.csv", mode='r', encoding='utf-8') as f:
@@ -50,10 +52,9 @@ with open("Characters.csv", mode='r', encoding='utf-8') as f:
     tableau_eleves = []
     for ligne in f:
         tableau_eleves.append(ligne.split(';')[1])
-#print(tableau_eleves)
 
 '''
-Ce programme permet de faire jouer tout les personnage 10 fois et de stocker leur résultat
+Les lignes de codes suivantes permettent de faire jouer tout les personnage 10 fois et de stocker leur résultat
 '''
 
 #Initialisation de la liste pour stocker les scores
@@ -72,15 +73,12 @@ total_scores = {eleve: sum(scores[partie][eleve] for partie in range(10)) for el
 #Classement des personnages par score décroissant
 classement_final = sorted(total_scores.items(), key=lambda item: item[1], reverse=True)
 
-
 #Affichage du classement final
 for i, (personnage, score) in enumerate(classement_final, 1):
     print(f"{i}. {personnage} : {score}")
-
 
 # Calcul de la moyenne des scores de tous les personnages
 moyenne_generale = sum(total_scores.values()) / len(total_scores)
 
 # Affichage de la moyenne générale
 print(f"La moyenne générale des scores est : {moyenne_generale}")
-
