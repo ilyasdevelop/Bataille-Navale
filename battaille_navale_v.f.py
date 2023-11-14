@@ -11,14 +11,14 @@ def partie():
     '''
     bateaux = []
     nb_bateaux = 2
-    for _ in range(nb_bateaux):
+    for _ in range(nb_bateaux): # on remplit la liste des bateaux en s'assurant que les bateaux ne peuvent pas s'empiler sur une case
         essai = (randint(1, 5), randint(1, 5))
         while essai in bateaux:
             essai = (randint(1, 5), randint(1, 5))
         bateaux.append(essai)
-    nb_coups = 3
+    nb_coups = 3 # nombre de coups restants, diminue à chaque coup jusqu'à 0
     points = 0
-    coups_deja_joues = []
+    coups_deja_joues = [] # variable destinée à enregistrer les coups joués pour ne pas tier plusieurs fois de suite sur une case
     while nb_coups > 0 and points < 5*nb_bateaux:
         nb_coups += -1
         coup = (randint(1, 5), randint(1, 5))
@@ -29,6 +29,7 @@ def partie():
             points += 10
             bateaux.remove(coup)
         else:
+            # les lignes qui suivent parcourent les cases pour vérifier si un bateau est sur la meme ligne ou colonne que le coup
             en_vue = False
             i = 0
             while i < len(bateaux) and not en_vue:
