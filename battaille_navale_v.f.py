@@ -40,7 +40,7 @@ def partie():
                 i += 1
             if en_vue:
                 points += 2
-    return(points)
+    return points
 
 
 '''
